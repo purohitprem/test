@@ -6,5 +6,5 @@ app = flask.Flask(__name__)
 def index():
     return "this is index page"
 
-app.run()
+app.run( debug=True)
 # print(__name__)
