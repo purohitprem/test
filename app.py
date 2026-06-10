@@ -11,10 +11,9 @@ class tea(BaseModel):
 
 teas: list[tea]=[]
 
-
 @app.get("/")
 def index():
-    return {"messege":"this is Tea House"}
+    return {"messege":"Welcome to Tea House"}
 
 @app.get("/teas")
 def get_teas():
@@ -25,7 +24,6 @@ def add_teas(tea : tea):
     teas.append(tea)
     return teas
 
-
 @app.put("/teas/{tea_id}")
 def update_tea(tea_id:int, updated_tea :tea):
     for index, tea in enumerate(teas):
@@ -33,7 +31,6 @@ def update_tea(tea_id:int, updated_tea :tea):
             teas[index] = updated_tea
             return updated_tea
     return {"error": "Tea not found"}
-
 
 @app.delete("/teas/{tea_id}")
 def delete_tea(tea_id :int):
