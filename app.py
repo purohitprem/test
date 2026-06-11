@@ -13,7 +13,7 @@ teas: list[tea]=[]
 
 @app.get("/")
 def index():
-    return {"messege":"Welcome to Tea House"}
+    return {"messege":"Welcome to Tea House "}
 
 @app.get("/teas")
 def get_teas():
