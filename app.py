@@ -13,7 +13,7 @@ teas: list[tea]=[]
 
 @app.get("/")
 def index():
-    return {"messege":"Welcome to Tea House "}
+    return {"messege":"Welcome to Prem Tea House "}
 
 @app.get("/teas")
 def get_teas():
@@ -39,3 +39,4 @@ def delete_tea(tea_id :int):
             delete = teas.pop(index)
             return delete
     return {"error": "Tea not found"}
+
