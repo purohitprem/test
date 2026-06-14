@@ -15,6 +15,7 @@ teas: list[tea]=[]
 def index():
     return {"messege":"Welcome to Prem Tea House "}
 
+
 @app.get("/teas")
 def get_teas():
     return teas
@@ -30,6 +31,7 @@ def update_tea(tea_id:int, updated_tea :tea):
         if tea.id==tea_id:
             teas[index] = updated_tea
             return updated_tea
+        
     return {"error": "Tea not found"}
 
 @app.delete("/teas/{tea_id}")
