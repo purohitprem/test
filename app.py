@@ -15,6 +15,9 @@ teas: list[tea]=[]
 def index():
     return {"messege":"Welcome to Prem Tea House "}
 
+@app.get('/tea-center')
+def moretea():
+    return {"messege":"add more Tea"}
 
 @app.get("/teas")
 def get_teas():
