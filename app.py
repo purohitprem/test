@@ -17,7 +17,7 @@ def index():
 
 @app.get('/tea-center')
 def moretea():
-    return {"messege":"add more Tea"}
+    return {"messege":"add more Tea nd coffee"}
 
 @app.get("/teas")
 def get_teas():
